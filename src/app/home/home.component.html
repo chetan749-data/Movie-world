@@ -1,0 +1,42 @@
+<div class="btn-danger btn-container" *ngIf="ApiError==true">
+    <div>
+        <p>
+            couldn't find movies?
+        </p>
+    </div>
+    <button (click)="refresh()"> Please refresh </button>
+</div> 
+
+
+<div class="container"(scroll)="onScroll($event)" *ngIf="ApiError==false">
+    <div>
+        <h1 >search your movie here</h1>
+        <form #searchForm="ngForm" >
+            <input type="text" required name="searchTerm"  autocomplete="off" ngModel class="form-control" placeholder="Enter movie name" (input)="getSearchKeyword($event)">
+        </form>
+    </div>    
+    <div class="movieResultContainer" >       
+        <div class="items"  >
+          <div class="item" *ngFor="let item of content; let indexOfElement=index">
+            <div class="card">               
+                <div class="avatar">
+                    <img src="{{getImageSource(indexOfElement)}}" alt="">
+                </div>
+                <div>
+                    <h3>
+                        {{item.title}}
+                    </h3>                    
+                </div>
+                <div class="description">
+                    <p>
+                        {{item.description}}
+                    </p>
+                </div>
+                <div class="genres" *ngIf="validGenre(indexOfElement)">
+                   <span>Genres: </span> {{item.genres}}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  </div>

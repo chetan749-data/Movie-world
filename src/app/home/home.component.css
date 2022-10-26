@@ -1,0 +1,59 @@
+h1{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.btn-container{
+    text-align: center;
+    margin-top: 260px;
+}
+button{
+    width: 150px;
+}
+.avatar{
+    background-color: black;
+}
+ .container{
+    height: 100vh;
+    overflow-y: scroll;
+    width: 100vw;
+} 
+.card{
+    width: 400px;
+    height: 400px;
+    border-radius: 2px red dotted;
+    margin: 10px;
+}
+.item{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+img{
+    height: 180px;
+    margin: 10px;
+}
+.items{
+    display: flex;
+    flex-wrap: wrap;
+}
+.description{
+  text-overflow: ellipsis;
+  min-width: 150px;
+  height: 100px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.genres{
+    width: auto;
+    height: 60px;
+    border-top: 1px solid rgba(0, 0, 0, 0.175);
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
